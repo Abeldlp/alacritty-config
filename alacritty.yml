@@ -3,7 +3,7 @@
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty it self.
-# env:
+env:
   # TERM env customization.
   #
   # If this property is not set, alacritty will set it to xterm-256color.
@@ -11,7 +11,7 @@
   # Note that some xterm terminfo databases don't declare support for italics.
   # You can verify this by checking for the presence of `smso` and `sitm` in
   # `infocmp xterm-256color`.
-  # TERM: xterm-256color-italic
+  TERM: xterm-256color
 
 window:
   # Window dimensions (changes require restart)
@@ -72,8 +72,8 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    # family: Hack Nerd Font
-    family: FiraCode Nerd Font
+    family: Hack Nerd Font
+    # family: FiraCode Nerd Font
     style: Light
     # family: "Fira Code"
     # family: "Source Code Pro"
@@ -136,38 +136,7 @@ draw_bold_text_with_bright_colors: false
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: true
 
-# Colors
 colors:
-
-  # Tomorrow (https://github.com/aarowill/base16-alacritty/blob/master/colors/base16-tomorrow.yml)
-  # Default colors
-  # primary:
-  #   background: '#2E3440'
-  #   foreground: '#d8dee9'
-  # # Colors the cursor will use if `custom_cursor_colors` is true
-  # cursor:
-  #   text: '0xffffff'
-  #   cursor: '#88C0D0'
-  # # Normal colors
-  # normal:
-  #   black:   '0xffffff'
-  #   red:     '0xc82829'
-  #   green:   '0x718c00'
-  #   yellow:  '0xeab700'
-  #   blue:    '0x4271ae'
-  #   magenta: '0x8959a8'
-  #   cyan:    '0x3e999f'
-  #   white:   '0x4d4d4c'
-  # # Bright colors
-  # bright:
-  #   black:   '0x8e908c'
-  #   red:     '0xf5871f'
-  #   green:   '0xe0e0e0'
-  #   yellow:  '0xd6d6d6'
-  #   blue:    '0x969896'
-  #   magenta: '0x282a2e'
-  #   cyan:    '0xa3685a'
-  #   white:   '0x1d1f21'
 #SOLARIZED THEME
   # Default colors
   primary:
