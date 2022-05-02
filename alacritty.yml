@@ -146,7 +146,8 @@ colors:
   # Cursor colors
   cursor:
     text:   '#002b36' # base03
-    cursor: '#839496' # base0
+    # cursor: '#268bd2' # base0
+    cursor: '#2A8BD2' # base0
 
   # Normal colors
   normal:
