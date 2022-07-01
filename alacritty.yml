@@ -3,15 +3,15 @@
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty it self.
-# env:
-  # TERM env customization.
-  #
-  # If this property is not set, alacritty will set it to xterm-256color.
-  #
-  # Note that some xterm terminfo databases don't declare support for italics.
-  # You can verify this by checking for the presence of `smso` and `sitm` in
-  # `infocmp xterm-256color`.
-  # TERM: xterm-256color-italic
+ # env:
+ #   # TERM env customization.
+  
+ #   # If this property is not set, alacritty will set it to xterm-256color.
+  
+ #   # Note that some xterm terminfo databases don't declare support for italics.
+ #   # You can verify this by checking for the presence of `smso` and `sitm` in
+ #   # `infocmp xterm-256color`.
+ #   TERM: xterm-256color-italic
 
 window:
   # Window dimensions (changes require restart)
@@ -19,18 +19,13 @@ window:
   # Specified in number of columns/lines, not pixels. If both are zero this
   # setting is ignored.
   dimensions:
-      # columns: 0
-      # lines: 0
-    columns: 100
-    lines: 30
+    columns: 120
+    lines: 40
 
   # Window padding (changes require restart)
-  #
-  # Blank space added around the window in pixels. This padding is not scaled by
-  # DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 0
-    y: 0
+    x: 3
+    y: 3
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: true 
@@ -42,7 +37,7 @@ window:
   # - none: neither borders nor title bar
   # - transparent: title bar, transparent background and title bar buttons
   # - buttonless: title bar, transparent background, but no title bar buttons
-  decorations: none 
+  decorations: full 
 
   # Startup Mode (changes require restart)
   #
@@ -72,8 +67,8 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    # family: Hack Nerd Font
-    family: FiraCode Nerd Font
+    family: Hack Nerd Font
+    # family: FiraCode Nerd Font
     style: Light
     # family: "Fira Code"
     # family: "Source Code Pro"
@@ -98,7 +93,7 @@ font:
     # style: "Medium Italic"
 
   # Point size of the font
-  size: 11.0
+  size: 10.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -113,22 +108,6 @@ font:
     x: 0
     y: 0
 
-  # Thin stroke font rendering (macOS only)
-  #
-  # Thin strokes are suitable for retina displays, but for non-retina you
-  # probably want this set to false.
-  #
-  # macOS >= 10.14.x:
-  #
-  # If the font quality on non-retina display looks bad then set
-  # `use_thin_strokes` to `true` and enable font smoothing by running the
-  # following command:
-  #   `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO`
-  #
-  # This is a global setting and will require a log out or restart to take
-  # effect.
-  # use_thin_strokes: true
-
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: false 
 
@@ -139,37 +118,6 @@ custom_cursor_colors: true
 # Colors
 colors:
 
-  # Tomorrow (https://github.com/aarowill/base16-alacritty/blob/master/colors/base16-tomorrow.yml)
-  # Default colors
-  # primary:
-  #   background: '#2E3440'
-  #   foreground: '#d8dee9'
-  # # Colors the cursor will use if `custom_cursor_colors` is true
-  # cursor:
-  #   text: '0xffffff'
-  #   cursor: '#88C0D0'
-  # # Normal colors
-  # normal:
-  #   black:   '0xffffff'
-  #   red:     '0xc82829'
-  #   green:   '0x718c00'
-  #   yellow:  '0xeab700'
-  #   blue:    '0x4271ae'
-  #   magenta: '0x8959a8'
-  #   cyan:    '0x3e999f'
-  #   white:   '0x4d4d4c'
-  # # Bright colors
-  # bright:
-  #   black:   '0x8e908c'
-  #   red:     '0xf5871f'
-  #   green:   '0xe0e0e0'
-  #   yellow:  '0xd6d6d6'
-  #   blue:    '0x969896'
-  #   magenta: '0x282a2e'
-  #   cyan:    '0xa3685a'
-  #   white:   '0x1d1f21'
-
-    #NORD THEME
   primary:
     background: '#2e3440'
     foreground: '#d8dee9'
@@ -177,19 +125,6 @@ colors:
   cursor:
     text: '#2e3440'
     cursor: '#d8dee9'
-  # vi_mode_cursor:
-  #   text: '#2e3440'
-  #   cursor: '#d8dee9'
-  # selection:
-  #   text: CellForeground
-  #   background: '#4c566a'
-  # search:
-  #   matches:
-  #     foreground: CellBackground
-  #     background: '#88c0d0'
-  #   bar:
-  #     background: '#434c5e'
-  #     foreground: '#d8dee9'
   normal:
     black: '#3b4252'
     red: '#bf616a'
@@ -218,38 +153,7 @@ colors:
     cyan: '#6d96a5'
     white: '#aeb3bb'
 
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #
-  # Example:
-  #   `- { index: 16, color: '0xff00ff' }`
-  #
-  # indexed_colors: []
-
 # Visual Bell
-#
-# Any time the BEL code is received, Alacritty "rings" the visual bell. Once
-# rung, the terminal background will be set to white and transition back to the
-# default background color. You can control the rate of this transition by
-# setting the `duration` property (represented in milliseconds). You can also
-# configure the transition function by setting the `animation` property.
-#
-# Possible values for `animation`
-# `Ease`
-# `EaseOut`
-# `EaseOutSine`
-# `EaseOutQuad`
-# `EaseOutCubic`
-# `EaseOutQuart`
-# `EaseOutQuint`
-# `EaseOutExpo`
-# `EaseOutCirc`
-# `Linear`
-#
-# To completely disable the visual bell, set its duration to 0.
-#
 bell:
   animation: EaseOutExpo
   color: '0xffffff'
@@ -521,5 +425,4 @@ shell:
   program: /usr/bin/zsh
   # args:
   #   - --command=tmux
-
 # vim: nospell
